@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My first website</title>
+  </head>
+  <body>
+    <header>
+      <h1 style="color: red">Hello World</h1>
+    </header>
+    <main>
+      <h2 class="valentine-header"></h2>
+      <img src="./pizza.jpg" alt="וולאנטיין פיצה בצורת לב" />
+      <section>
+        <label for="username">
+          הכנס את השם שלך
+          <input type="text" name="username" id="username" />
+        </label>
+      </section>
+    </main>
+  </body>
+  <script>
+    const myInput = document.getElementById("username");
+    const myHeader = document.querySelector(".valentine-header");
+    myInput.addEventListener("input", (event) => {
+      myHeader.textContent = `חג אהבה שמח ל`;
+      myHeader.textContent += event.target.value;
+    });
+  </script>
+</html>
